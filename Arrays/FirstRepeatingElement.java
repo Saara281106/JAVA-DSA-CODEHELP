@@ -1,9 +1,11 @@
+import java.util.HashMap;
+
 public class FirstRepeatingElement {
     public static void main(String[] args) {
         System.out.println();
 
         int arr[] = { 1, 2, 3, 4, 5, 5, 5, 6, 1 };
-        firstRepeating(arr);
+        optimizedSol(arr);
 
         System.out.println();
     }
@@ -32,6 +34,21 @@ public class FirstRepeatingElement {
                 }
             }
             if (found == true) {
+                break;
+            }
+        }
+    }
+
+    // optimized method
+    static void optimizedSol(int arr[]) {
+        HashMap<Integer, Integer> frequency = new HashMap<>();
+        for (int i : arr) {
+            frequency.put(i, frequency.getOrDefault(i, 0) + 1);
+        }
+
+        for (int i : arr) {
+            if (frequency.get(i) > 1) {
+                System.out.println("The first repeating value is: " + i);
                 break;
             }
         }
