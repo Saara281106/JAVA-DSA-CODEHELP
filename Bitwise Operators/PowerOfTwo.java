@@ -33,6 +33,8 @@ public class PowerOfTwo {
     }
 
     static boolean BetterMenthod(int n) {
+
+        //Formula can be used.
         if ((n & (n - 1)) == 0) {
             return true;
         } else {
