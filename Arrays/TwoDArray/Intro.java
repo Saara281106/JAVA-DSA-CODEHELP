@@ -1,8 +1,6 @@
-
-// Source code is decompiled from a .class file using FernFlower decompiler (from Intellij IDEA).
 import java.util.Scanner;
 
-public class TwoDarray {
+public class Intro {
     public static void main(String[] args) {
 
         // Printing 2D Array
