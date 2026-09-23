@@ -3,7 +3,7 @@ public class UpperBound {
         System.out.println();
 
         int arr[] = { -4, -3, 0, 1, 2, 2, 2, 2, 2, 2, 2, 3, 15, 16, 80 };
-        int target = 2;
+        int target = 80;
         int ans = getUpperBound(arr, target);
         System.out.println("Upper Bound of " + target + ": " + ans);
 

@@ -4,14 +4,14 @@ public class LowerBound {
 
         int arr[] = { -4, -3, 0, 1, 2, 2, 3 };
         int target = 2;
-        int ans = lowerBound(arr, target);
+        int ans = getLowerBound(arr, target);
         System.out.println("Lower Bound of " + target + ": " + ans);
 
         System.out.println();
         System.out.println();
     }
 
-    static int lowerBound(int arr[], int target) {
+    static int getLowerBound(int arr[], int target) {
         int n = arr.length;
         int s = 0;
         int e = n - 1;
