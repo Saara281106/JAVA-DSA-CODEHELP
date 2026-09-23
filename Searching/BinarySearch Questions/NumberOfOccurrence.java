@@ -16,10 +16,6 @@ public class NumberOfOccurrence {
         int uB = getUpperBound(arr, target);
         int lB = getLowerBound(arr, target);
 
-        if(uB == -1){
-            return ((n)-lB);
-        }
-
         return (uB - lB);
     }
 
@@ -28,7 +24,7 @@ public class NumberOfOccurrence {
         int s = 0;
         int e = n - 1;
         int mid = s - ((s - e) / 2);
-        int ans = -1;
+        int ans = n;
 
         while (s <= e) {
             if (arr[mid] >= target) {
@@ -49,7 +45,7 @@ public class NumberOfOccurrence {
         int s = 0;
         int e = n - 1;
         int mid = s - ((s - e) / 2);
-        int ans = -1;
+        int ans = n;
 
         while (s <= e) {
             if (arr[mid] <= target) {
