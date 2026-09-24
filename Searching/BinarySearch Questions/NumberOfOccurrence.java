@@ -12,7 +12,6 @@ public class NumberOfOccurrence {
     }
 
     static int numberOfOccurrence(int arr[], int target) {
-        int n = arr.length;
         int uB = getUpperBound(arr, target);
         int lB = getLowerBound(arr, target);
 
