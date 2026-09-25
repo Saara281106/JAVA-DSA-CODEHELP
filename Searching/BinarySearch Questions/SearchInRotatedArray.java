@@ -5,15 +5,8 @@ public class SearchInRotatedArray {
         int arr[] = { 50, 60, 70, 10, 20, 30, 40 };
         int target = 40;
 
-        int n = arr.length;
-
-        if (arr[0] < arr[n - 1]) {
-            System.out.println("Array is not rotated mere saath khel mat khelo");
-        } else {
-            int index = search(arr, target);
-            System.out.println("The target is present at index: " + index);
-
-        }
+        int index = search(arr, target);
+        System.out.println("The target is present at index: " + index);
 
         System.out.println();
         System.out.println();
@@ -24,15 +17,19 @@ public class SearchInRotatedArray {
         int n = arr.length;
         int pivot = getPivotIndex(arr);
 
-        if (target <= arr[n - 1]) {
-            // search in right part
-
-            ans = binarySearch(arr, target, pivot + 1, n - 1);
-
+        if (pivot == -1) {
+            ans = binarySearch(arr, target, 0, n - 1);
         } else {
-            // search in left part
+            if (target <= arr[n - 1]) {
+                // search in right part
 
-            ans = binarySearch(arr, target, 0, pivot);
+                ans = binarySearch(arr, target, pivot + 1, n - 1);
+
+            } else {
+                // search in left part
+
+                ans = binarySearch(arr, target, 0, pivot);
+            }
         }
 
         return ans;
