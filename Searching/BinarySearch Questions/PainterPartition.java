@@ -2,8 +2,8 @@ public class PainterPartition {
     public static void main(String[] args) {
         System.out.println();
 
-        int arr[] = { 10, 20, 30, 40 };
-        int k = 2;
+        int arr[] = { 5, 10, 30, 20, 15 };
+        int k = 3;
         int ans = painterPartion(arr, k);
         System.out.println("Minimum of Max time taken by painters: " + ans);
 
