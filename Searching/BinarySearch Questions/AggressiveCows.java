@@ -32,6 +32,18 @@ public class AggressiveCows {
 
     static boolean isValid(int arr[], int k, int minDistance) {
 
-        return true;
+        int cowsCount = 1;
+        int lastPosition = 0 ; 
+        for(int i = 1 ; i<arr.length ; i++){
+            if(arr[i] - arr[lastPosition] >= minDistance){
+                cowsCount ++;
+                lastPosition = i;
+                if(cowsCount == k){
+                    return true;
+                }
+            }
+        }
+        
+        return false;
     }
 }
