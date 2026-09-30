@@ -2,8 +2,8 @@ public class NumberOfOccurrence {
     public static void main(String[] args) {
         System.out.println();
 
-        int arr[] = { 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3 };
-        int target = 3;
+        int arr[] = { 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 5, 6, 6, 7, 7, 7, 20 };
+        int target = 6;
         int ans = numberOfOccurrence(arr, target);
         System.out.println("Number of occurence of " + target + ": " + ans);
 
