@@ -30,9 +30,9 @@ public class SearchNearlySortedArray {
             }
 
             if(target > arr[mid]){
-                s = mid + 1;
+                s = mid + 2;
             } else{
-                e = mid - 1;
+                e = mid - 2;
             }
 
         }
